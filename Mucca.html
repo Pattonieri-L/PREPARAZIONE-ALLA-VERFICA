@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href="style.css">
+
+</head>
+<body> 
+ <p style="color: rgb(236, 234, 234);">PAGINA EFFETTI SPECIALI</p>
+<button id="bottone">testo a sorpresa</button>
+<div id="testo"></div>
+<script>
+let fase = 0;
+
+document.getElementById("bottone").addEventListener("click", function() {
+    const testo = document.getElementById("testo");
+    const bottone = document.getElementById("bottone");
+    const disegno = document.getElementById("disegno");
+
+    if (fase === 0) {
+        testo.textContent = "PEPPEREPE";
+        bottone.textContent = "nuova sorpresa";
+        fase = 1;
+    }
+    else if (fase === 1) {
+        alert("TADAAAA!");
+        bottone.textContent = "E ora un bel disegno";
+        fase = 2;
+    }
+    else if (fase === 2) {
+        disegno.style.display = "STOP";
+        bottone.textContent = "FATTO";
+        fase = 3;
+    }
+})
+
+</script>
+</body>
+</html>
